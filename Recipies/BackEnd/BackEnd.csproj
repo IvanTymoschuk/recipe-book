@@ -24,6 +24,18 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\ingrediens\ingredient.component.ts" />
+    <None Remove="ClientApp\src\app\micro-elements\microelement.component.ts" />
+    <None Remove="ClientApp\src\app\vitamins\vitamin.componet.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\ingrediens\ingredient.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\micro-elements\microelement.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\vitamins\vitamin.componet.ts" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
