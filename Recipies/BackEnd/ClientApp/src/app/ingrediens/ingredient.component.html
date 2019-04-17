@@ -6,18 +6,18 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" *ngFor="let ingredient of allIngredients | async">
 
     <p-card subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
       <p-header>
       <h3 >{ingredient.Name}</h3>
       </p-header>
       <div>
-      <p>{Description}</p>
-      <p>Kkal (100gr): {Kkal_100g}</p>
-      <p>Fats (100gr): {Fats_100g}</p>
-      <p>Proteins (100gr): {Proteins_100g}</p>
-      <p>Carbonydrates (100gr): {Carbohydrates_100g}</p>
+      <p>{{ingredient.Description}}</p>
+      <p>Kkal (100gr): {{ingredient.Kkal_100g}}</p>
+      <p>Fats (100gr): {{ingredient.Fats_100g}</p>
+      <p>Proteins (100gr): {{ingredient.Proteins_100g}}</p>
+      <p>Carbonydrates (100gr): {{ingredient.Carbohydrates_100g}}</p>
       <p>  
         <app-vitamin></app-vitamin>  
       </p>

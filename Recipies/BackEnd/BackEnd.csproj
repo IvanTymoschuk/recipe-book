@@ -33,7 +33,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\ingrediens\ingredient.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\micro-elements\microelement.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\vitamins\vitamin.componet.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

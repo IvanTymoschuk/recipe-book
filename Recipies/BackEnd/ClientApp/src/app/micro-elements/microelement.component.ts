@@ -1,5 +1,8 @@
-﻿import { Component , OnInit} from '@angular/core';
+import { Component , OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
+import { MicroElement } from '../micro.element';
+import {MicroElementsService} from '../micro.elements.service';
+
 
 @Component({
   selector: 'app-microelement',
@@ -7,14 +10,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./microelement.component.css']
 })
 export class MicroElementComponent implements OnInit {
-    
-    MicroElements: any;
-    allIngredients: Observable<Worker[]>;
-    constructor( private wS: WorkersService) { }
+    allMicroElements: Observable<MicroElement[]>;
+    constructor( private meS: MicroElementsService) { }
     ngOnInit() {
 
     }
     loadAllIngredients() {
-        this.allIngredients = this.wS.getAllWorkers();
+        this.allMicroElements = this.meS.getAllMicroElements();
       }
 }

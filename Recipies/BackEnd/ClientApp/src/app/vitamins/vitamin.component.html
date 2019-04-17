@@ -5,13 +5,13 @@
     <title></title>
 </head>
 <body>
-<div class="container">
+<div class="container" *ngFor="let vitamin of allVitamins | async">
     <p-card  subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
         <p-header>
-        <h3 >{Name}</h3>
+        <h3 >{{vitamin.Name}}</h3>
         </p-header>
         <div>
-        <p>{Description}</p>
+        <p>{{vitamin.Description}}</p>
         </div>
         <p-footer>
           
