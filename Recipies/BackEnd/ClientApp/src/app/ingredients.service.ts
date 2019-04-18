@@ -8,7 +8,7 @@ import { Ingredient} from './Ingredient';
     providedIn: 'root'
   })
   export class IngredientsService {
-    url = 'http://localhost:44314/Api/Ingredients';
+    url = 'http://localhost:4200/Api/Ingredients';
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
     constructor(private http: HttpClient) { }
 

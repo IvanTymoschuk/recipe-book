@@ -8,7 +8,7 @@ import { Vitamin} from './vitamin';
     providedIn: 'root'
   })
   export class VitaminsService {
-    url = 'http://localhost:44314/Api/Vitamins';
+    url = 'http://localhost:4200/Api/Vitamins';
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
     constructor(private http: HttpClient) { }
 

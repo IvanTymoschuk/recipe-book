@@ -8,7 +8,7 @@ import { MicroElement } from './micro.element';
     providedIn: 'root'
   })
   export class MicroElementsService {
-    url = 'http://localhost:44314/Api/MicroElements';
+    url = 'http://localhost:4200/Api/MicroElements';
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'}) };
     constructor(private http: HttpClient) { }
 
